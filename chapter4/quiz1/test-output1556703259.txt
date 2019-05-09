@@ -1,0 +1,23 @@
+..F...
+
+Failures:
+
+  1) Q2. Sum integers calculates 1 + 2 + 3 + ... + 250 and `puts`es the result
+     Failure/Error:
+       expect { load "questions/question_2.rb" }
+         .to output(/#{expected}$/).to_stdout
+
+     NoMethodError:
+       undefined method `sum' for #<Enumerator: 1..250:each>
+     # questions/question_2.rb:4:in `<top (required)>'
+     # ./spec/question_2_spec.rb:7:in `load'
+     # ./spec/question_2_spec.rb:7:in `block (3 levels) in <top (required)>'
+     # ./spec/question_2_spec.rb:7:in `block (2 levels) in <top (required)>'
+
+Finished in 4.99 seconds (files took 0.14426 seconds to load)
+6 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/question_2_spec.rb:6 # Q2. Sum integers calculates 1 + 2 + 3 + ... + 250 and `puts`es the result
+
