@@ -22,3 +22,25 @@
 #   the user input.  You shouldn't need to enter any input manually.
 #   If the tests hang when you run them, it probably means your code
 #   doesn't work correctly, yet.
+
+position = "passage"
+
+while true do
+  input = gets.chomp
+
+  if position == "passage"
+    if input == "north"
+      puts "You are in a scary cave."
+      position = "cave"
+    end
+  elsif position == "cave"
+    if input == "south"
+      puts "You are in a scary passage."
+      position = "passage"
+    end
+    if input == "north"
+      puts "You walk into sunlight."
+      break
+    end
+  end
+end

@@ -19,3 +19,18 @@
 #
 # * Note: You can assume the players will only ever input `rock`,
 #   `paper` or `scissors`.
+
+win_conditions = {
+  'rock' => 'scissors',
+  'paper' => 'rock',
+  'scissors' => 'paper'
+}
+
+puts 'Player 1 - choose your weapon!'
+player_1_choice = gets.chomp
+puts 'Player 2 - choose your weapon!'
+player_2_choice = gets.chomp
+
+puts "It's a draw" if player_1_choice == player_2_choice
+puts win_conditions[player_1_choice] == player_2_choice ?
+  "Player 1 wins" : "Player 2 wins"

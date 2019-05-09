@@ -33,3 +33,35 @@
 #   the user input.  You shouldn't need to enter any input manually.
 #   If the tests hang when you run them, it probably means your code
 #   doesn't work correctly, yet.
+
+location = 'hall'
+
+while true do
+  input = gets.chomp
+
+  if input == 'quit'
+    puts 'Bye!'
+    break
+  end
+
+  if location == 'hall'
+    if input == 'look'
+      puts 'You are standing in an hall with a marble floor. You see a door.'
+    elsif input == 'north'
+      location = 'study'
+    end
+  end
+
+  if location == 'study'
+    if input == 'look'
+      puts 'You are in a warm and cosy study. You see a safe. You see a desk.'
+    elsif input == 'look at desk'
+      puts 'You see a piece of paper that reads, The combination is 2451.'
+    elsif input == 'south'
+      location = 'hall'
+    elsif input == 'enter combination 2451'
+      puts 'You see some diamonds in the safe, pick them up and make your escape'
+      break
+    end
+  end
+end
