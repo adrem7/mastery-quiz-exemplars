@@ -7,3 +7,14 @@
 #       `FizzBuzz`.
 #     * If the number is divisible by neither 3 or 5, keep the number.
 # * `puts`es these "FizzBuzz sequence" entries, one per line.
+
+def fizzbuzz(number)
+  return 'FizzBuzz' if number % 15 == 0
+  return 'Fizz' if number % 3 == 0
+  return 'Buzz' if number % 5 == 0
+  return number
+end
+
+(1..20).each do |number|
+  puts fizzbuzz(number)
+end

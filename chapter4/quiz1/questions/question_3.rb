@@ -6,3 +6,13 @@
 #     previous two Fibonacci numbers together e.g. the third Fibonacci
 #     number is the result of `0 + 1`.
 # * `puts`es these numbers, one per line.
+
+before_last, last = 0, 1
+puts before_last, last
+
+18.times do
+  current = before_last + last
+  before_last = last
+  last = current
+  puts current
+end
