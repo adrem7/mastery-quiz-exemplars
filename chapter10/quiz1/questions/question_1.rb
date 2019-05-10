@@ -22,3 +22,27 @@
 
 # * Note: When you run the automated tests, make sure to remove from
 #   the top level of the file any calls to any methods.
+
+class Todo
+  attr_reader :text
+
+  def initialize(text)
+    @text = text
+  end
+end
+
+class TodoList
+  attr_reader :todos
+
+  def initialize
+    @todos = []
+  end
+
+  def add(todo)
+    todos.push(todo)
+  end
+
+  def print
+    todos.each { |todo| puts "* #{todo.text}" }
+  end
+end
