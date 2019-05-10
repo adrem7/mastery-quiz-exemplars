@@ -28,19 +28,14 @@ position = "passage"
 while true do
   input = gets.chomp
 
-  if position == "passage"
-    if input == "north"
-      puts "You are in a scary cave."
-      position = "cave"
-    end
-  elsif position == "cave"
-    if input == "south"
-      puts "You are in a scary passage."
-      position = "passage"
-    end
-    if input == "north"
-      puts "You walk into sunlight."
-      break
-    end
+  if position == "passage" && input == "north"
+    puts "You are in a scary cave."
+    position = "cave"
+  elsif position == "cave" && input == "south"
+    puts "You are in a scary passage."
+    position = "passage"
+  elsif position == "cave" && input == "north"
+    puts "You walk into sunlight."
+    break
   end
 end

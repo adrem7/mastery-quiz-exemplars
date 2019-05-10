@@ -82,8 +82,7 @@ def run_game
 
   while true do
     puts 'hit or stick?'
-    player_choice = move
-    break if player_choice == 'stick'
+    break if move == 'stick'
     hand.push(random_card)
     puts "Score so far: #{score(hand)}"
   end

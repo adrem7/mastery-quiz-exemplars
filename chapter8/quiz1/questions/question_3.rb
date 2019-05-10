@@ -43,7 +43,5 @@ options = people.map { |person| person[category] }.uniq
 
 options.each do |option|
   puts option
-  people .each do |person|
-    puts person['name'] if person[category] == option
-  end
+  people.each { |person| puts person['name'] if person[category] == option }
 end
