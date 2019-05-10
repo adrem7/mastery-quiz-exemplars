@@ -50,3 +50,26 @@
 #   many groups they want to create.  You can assume the user will
 #   input integers for group numbers that exist when they are asked
 #   for the number of a group to print out.
+
+puts 'enter number of groups'
+num_of_groups = gets.chomp
+
+groups = []
+num_of_groups.to_i.times { groups.push([]) }
+
+current_index = 0
+while true do
+  puts "enter a name"
+  name = gets.chomp
+  break if name == 'stop'
+  groups[current_index].push(name)
+  current_index += 1
+  current_index = 0 if current_index == groups.length
+end
+
+while true do
+  puts "enter the number of the group to print"
+  index = gets.chomp
+  break if index == 'stop'
+  puts groups[index.to_i - 1].join(', ')
+end

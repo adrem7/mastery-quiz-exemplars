@@ -18,3 +18,7 @@
 #
 # * Note: You can assume the user will only enter integers separated
 #   by commas with no spaces.
+
+puts 'please provide a comma seperated list of integers:'
+num_array = gets.chomp.split(',')
+num_array.each { |num| puts '-' * num.to_i }

@@ -61,3 +61,28 @@
 #   neither
 #   You survived!
 #   ```
+
+player_position = 2
+turn_number = 0
+
+while true do
+  river = "-----,--C--,CC-CC,CC-CC".split(',')
+
+  if turn_number == river.length
+    puts 'You survived!'
+    break
+  end
+
+  if river[turn_number][player_position] == 'C'
+    puts 'You were eaten.'
+    break
+  end
+
+  river[turn_number][player_position] = 'P'
+  puts river
+
+  input = gets.chomp
+  player_position += 1 if input == 'right'
+  player_position -= 1 if input == 'left'
+  turn_number += 1
+end
