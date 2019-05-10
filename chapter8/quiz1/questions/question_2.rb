@@ -29,3 +29,11 @@ people = [
   { "name" => "Awad", "sport" => "weightlifting", "fruit" => "kiwi" },
   { "name" => "Will", "sport" => "cycling", "fruit" => "blackberry" }
 ]
+
+puts 'Enter what category to search'
+category = gets.chomp
+puts 'Enter what value to search for'
+value = gets.chomp
+
+people.select { |person| person[category] == value }
+.each { |person| puts person["name"] }

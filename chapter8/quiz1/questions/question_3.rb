@@ -35,3 +35,15 @@ people = [
   { "name" => "Awad", "sport" => "weightlifting", "fruit" => "kiwi" },
   { "name" => "Will", "sport" => "cycling", "fruit" => "blackberry" }
 ]
+
+puts 'Enter category to group people by'
+category = gets.chomp
+
+options = people.map { |person| person[category] }.uniq
+
+options.each do |option|
+  puts option
+  people .each do |person|
+    puts person['name'] if person[category] == option
+  end
+end
